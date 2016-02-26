@@ -42,4 +42,5 @@ ForModel[is.nan(ForModel)]<-0
 ForModel[is.na(ForModel)]<-0
 # dta.model <- lapply(unique(cora.aggr$PRODUCTGROUP.Level1), function (x) prepData(input, cora.aggr[cora.aggr$PRODUCTGROUP.Level1 == x,]))
 # names(dta.model) <- unique(cora.aggr$PRODUCTGROUP.Level1)
-# save(dta.model,file="TrainData.rda")
+save(ForModel,file="Data.rda")
+write.csv(ForModel,"forModel.csv", row.names = F)
