@@ -1,3 +1,6 @@
+library(FSelector)
+
+
 ################################# Feature Selection #########################################
 
 featCor <- cor(ForModel[,-ncol(ForModel)],ForModel[,ncol(ForModel)])

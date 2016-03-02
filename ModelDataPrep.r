@@ -1,7 +1,6 @@
 setwd("/Users/Admin/Documents/workspace/Sales Estimation by Geo/")
 library(dummies)
 library(reshape)
-library(FSelector)
 library(caret)
 source("fnR.R")
 
