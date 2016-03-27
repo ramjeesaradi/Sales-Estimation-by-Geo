@@ -29,3 +29,11 @@ prepData <- function(input, cora.aggr) {
   ForModel[is.na(ForModel)]<-0
   return(ForModel)
 }
+
+equalFreqBin <- function(col,nbins){
+  ordCol <- col[order(col)]
+  chunkSize <- floor(length(col)/nbins)
+  intervals <- cut(col,c(0,ordCol[(1:(nbins-1)-1)*chunkSize],ifelse(length(col)%%nbins != 0,max(col),ordCol[nbins*chunkSize])))
+  return(intervals)
+}
+equalFreqBin(ForModel[,"Sales..Rs."],7)
