@@ -36,4 +36,3 @@ equalFreqBin <- function(col,nbins){
   intervals <- cut(col,c(0,ordCol[(1:(nbins-1)-1)*chunkSize],ifelse(length(col)%%nbins != 0,max(col),ordCol[nbins*chunkSize])))
   return(intervals)
 }
-equalFreqBin(ForModel[,"Sales..Rs."],7)

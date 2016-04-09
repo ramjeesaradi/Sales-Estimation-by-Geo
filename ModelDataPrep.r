@@ -4,7 +4,7 @@ library(reshape)
 library(caret)
 source("fnR.R")
 
-###############################load Data and retain only useful fields###########################
+###############################load Data and retain only relavent fields###########################
 cora.dta <- read.csv("Coromandel Salesdata.csv")
 cora <- cora.dta[,c("Date_ID","PRODUCTGROUP.Level3", "District","Sales..Rs.")]
 cora$month <- factor(months.Date(as.Date(cora$Date_ID),abbreviate = TRUE))
